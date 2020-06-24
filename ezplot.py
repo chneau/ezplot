@@ -9,6 +9,11 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+# TODO
+# - Add argument for output format
+# - Add argument for output size
+# - Add argument for output directory
+
 
 @click.command()
 @click.argument(
