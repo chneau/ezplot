@@ -29,4 +29,3 @@ pigar --without-referenced-comments -o ">=" # Generate requirements.txt for curr
 ```
 
 - check the site-packages directory of python to remove bad remaining directories
-```
