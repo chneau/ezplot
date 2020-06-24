@@ -54,6 +54,7 @@ def main(files, format, size, context, rcparam):
     for (setting, value) in rcparam:
         print(f"plt.rcParams[{setting}] = {value}")
         plt.rcParams[setting] = value
+    plt.rcParams["figure.autolayout"] = True
     sns.set_context(context)
     global output_format
     global binsize
@@ -94,6 +95,7 @@ def all(csvs, title, fn):
     m = pd.DataFrame(data)
     plt.figure()
     p = sns.lineplot(data=m.groupby(m.index // binsize).mean())
+    p.set(xlabel="gen", ylabel="fitness")
     p.set_title(f"{title}").get_figure().savefig(f"all_{title}.{output_format}")
 
 
@@ -103,6 +105,7 @@ def min_mean_max(df, title):
     )
     plt.figure()
     p = sns.lineplot(data=mmm.groupby(mmm.index // binsize).mean())
+    p.set(xlabel="gen", ylabel="fitness")
     p.set_title(f"{title}").get_figure().savefig(
         f"{title}_min_mean_max.{output_format}"
     )
