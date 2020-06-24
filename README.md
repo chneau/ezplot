@@ -25,7 +25,9 @@ pip install --ignore-installed -U .
 ```bash
 # evil good
 pip install pigar
-pigar --without-referenced-comments -o ">=" # Generate requirements.txt for current directory.
+
+# Generate requirements.txt for current directory.
+pigar --without-referenced-comments -o ">="
 ```
 
 - check the site-packages directory of python to remove bad remaining directories
