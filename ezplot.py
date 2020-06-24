@@ -37,13 +37,23 @@ binsize = None
     default="talk",
     help="The output plot context (paper, notebook, talk, poster)",
 )
-def main(files, format, size, context):
+@click.option(
+    "--rcparam",
+    "-r",
+    multiple=True,
+    type=click.Tuple([str, str]),
+    help="modify any matplotlib rcParams https://matplotlib.org/tutorials/introductory/customizing.html#a-sample-matplotlibrc-file",
+)
+def main(files, format, size, context, rcparam):
     """Process all FILES."""
     start = time.process_time()
     sns.set_style(
         "darkgrid",
         {"axes.edgecolor": "black", "xtick.bottom": True, "ytick.left": True,},
     )
+    for (setting, value) in rcparam:
+        print(f"plt.rcParams[{setting}] = {value}")
+        plt.rcParams[setting] = value
     sns.set_context(context)
     global output_format
     global binsize
