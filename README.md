@@ -1,5 +1,9 @@
 # ezplot
-A plotter for population based results algorithm
+A plotter for population based results algorithm  
+Tested with success on:
+- `Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)] on win32`
+- `Python 3.7.3 (default, Dec 20 2019, 18:57:59) [GCC 8.3.0] on linux`
+- `Python 3.8.2 (default, Apr 27 2020, 15:53:34) [GCC 9.3.0] on linux`
 
 ## install
 
