@@ -45,7 +45,7 @@ binsize = None
     help="modify any matplotlib rcParams https://matplotlib.org/tutorials/introductory/customizing.html#a-sample-matplotlibrc-file",
 )
 def main(files, format, size, context, rcparam):
-    """Process all FILES."""
+    """Process csv FILES to create meaningful plots."""
     start = time.process_time()
     sns.set_style(
         "darkgrid",
